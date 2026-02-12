@@ -1,0 +1,30 @@
+# Netlify Configuration for ridbricks
+
+[build]
+  publish = "."
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Redirect rules for convenience
+[[redirects]]
+  from = "/about"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/buy"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/sell"
+  to = "/contact.html"
+  status = 301
