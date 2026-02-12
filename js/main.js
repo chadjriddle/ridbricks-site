@@ -215,6 +215,12 @@ if (form) {
 
   // Form submission validation
   form.addEventListener('submit', (e) => {
+    // Set timestamp for unique submission
+    const timestampField = document.getElementById('submission-time');
+    if (timestampField) {
+      timestampField.value = new Date().toISOString();
+    }
+
     // Validate all fields
     const isNameValid = validateName();
     const isEmailValid = validateEmail();
