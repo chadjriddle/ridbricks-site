@@ -216,6 +216,17 @@ nav a:hover {
   color: white;
 }
 
+.btn-outline-white {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline-white:hover {
+  background-color: white;
+  color: var(--color-primary);
+}
+
 .btn-large {
   padding: var(--spacing-md) var(--spacing-xl);
   font-size: var(--font-size-lg);
@@ -247,6 +258,11 @@ nav a:hover {
   gap: var(--spacing-md);
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.hero-cta .btn {
+  flex: 1;
+  max-width: 280px;
 }
 
 /* Sections */
@@ -494,14 +510,17 @@ footer {
   grid-template-columns: 1fr;
   gap: var(--spacing-lg);
   text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 footer a {
-  color: white;
+  color: var(--color-secondary);
+  text-decoration: underline;
 }
 
 footer a:hover {
-  color: var(--color-secondary);
+  color: white;
 }
 
 .footer-links {
@@ -568,7 +587,7 @@ footer a:hover {
   }
 
   .footer-content {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
