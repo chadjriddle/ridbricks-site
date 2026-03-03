@@ -497,6 +497,10 @@ textarea {
   margin-top: var(--spacing-xl);
 }
 
+.success-container .process-steps {
+  text-align: left;
+}
+
 /* Footer */
 footer {
   background-color: var(--color-text);
@@ -636,6 +640,7 @@ footer a:hover {
 
   .hero-cta {
     flex-direction: column;
+    align-items: center;
   }
 
   .btn {
